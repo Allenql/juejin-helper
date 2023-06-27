@@ -7,30 +7,30 @@ const { EMAIL, AUTHORIZATION_CODE, PUSHPLUS_TOKEN, DINGDING_WEBHOOK, FEISHU_WEBH
 const pushMessage = ({ type, message }) => {
   console.log(message)
 
-  EMAIL &&
-    AUTHORIZATION_CODE &&
-    email(
-      formatter(type, message, {
-        style: 'html',
-        bold: true,
-      })
-    )
-  PUSHPLUS_TOKEN &&
-    pushplus(
-      formatter(type, message, {
-        style: 'markdown',
-        bold: true,
-        wordWrap: true,
-      })
-    )
-  DINGDING_WEBHOOK &&
-    dingding(
-      formatter(type, message, {
-        style: 'markdown',
-        bold: true,
-        wordWrap: true,
-      })
-    )
+  // EMAIL &&
+  //   AUTHORIZATION_CODE &&
+  //   email(
+  //     formatter(type, message, {
+  //       style: 'html',
+  //       bold: true,
+  //     })
+  //   )
+  // PUSHPLUS_TOKEN &&
+  //   pushplus(
+  //     formatter(type, message, {
+  //       style: 'markdown',
+  //       bold: true,
+  //       wordWrap: true,
+  //     })
+  //   )
+  // DINGDING_WEBHOOK &&
+  //   dingding(
+  //     formatter(type, message, {
+  //       style: 'markdown',
+  //       bold: true,
+  //       wordWrap: true,
+  //     })
+  //   )
   FEISHU_WEBHOOK &&
     feishu(
       formatter(type, message, {
